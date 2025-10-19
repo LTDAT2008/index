@@ -1110,7 +1110,7 @@
             if (indexText < textLetterH2.length) {
                 textLetter.textContent += textLetterH2[indexText];
                 indexText++;
-                setTimeout(textCharLetter, 100);
+                setTimeout(textCharLetter, 150);
             }
             else {
                 clearInterval(timoutTextLetter);
@@ -1122,10 +1122,7 @@
         function funcTimeoutLetter() {
             indexText = 0; // Reset indexText
             textLetter.textContent = ''; // Xóa nội dung hiện tại của textLetter
-            clearInterval(timoutTextLetter);
-            timoutTextLetter = setInterval(() => {
-                textCharLetter();
-            }, 200)
+            textCharLetter();
         }
 
         // chữ của thư bạn muốn gửi
@@ -1139,18 +1136,11 @@
                 indexTextContent++;
                 setTimeout(textCharLetterContent, 80);
             }
-            else {
-                clearInterval(timoutTextLetterContent)
-
-            }
         }
         function funcTimeoutLetterContent() {
             indexTextContent = 0; // Reset indexTextContent
             textLetterContent.textContent = ''; // Xóa nội dung hiện tại của textLetter
-            clearInterval(timoutTextLetterContent);
-            timoutTextLetterContent = setInterval(() => {
-                textCharLetterContent();
-            }, 100)
+            textCharLetterContent();
         }
         $(document).ready(function () {
             $('.valentines').mouseenter(function () {
