@@ -1110,7 +1110,7 @@
             if (indexText < textLetterH2.length) {
                 textLetter.textContent += textLetterH2[indexText];
                 indexText++;
-                setTimeout(indexText, 100);
+                setTimeout(textCharLetter, 100);
             }
             else {
                 clearInterval(timoutTextLetter);
@@ -1137,7 +1137,7 @@
             if (indexTextContent < textLetterP.length) {
                 textLetterContent.textContent += textLetterP[indexTextContent];
                 indexTextContent++;
-                setTimeout(indexTextContent, 1);
+                setTimeout(textCharLetterContent, 1);
             }
             else {
                 clearInterval(timoutTextLetterContent)
